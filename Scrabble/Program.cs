@@ -8,7 +8,8 @@ namespace Scrabble
   {
     static void Main()
     {
-
+      PointSystem newQuery = new PointSystem("cat");
+      Console.WriteLine(newQuery.PointEvaluator());
     }
 
   }

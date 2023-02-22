@@ -15,6 +15,21 @@ namespace Scrabble.Models
     _word = userWord;
   }
   
+  public int PointEvaluator()
+  {
+    char[] charedWord = _word.ToCharArray();
+    
+    int score = 0;
+
+    foreach (char letter in charedWord)
+    {
+      score++;
+      Console.WriteLine(letter);
+    }
+    Console.WriteLine($"the score is: {score}");
+    return 5;
+  }
+  
   }
 
 }

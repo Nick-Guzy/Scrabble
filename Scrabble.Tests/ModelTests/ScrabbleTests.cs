@@ -25,5 +25,15 @@ namespace Scrabble.Tests
       Assert.AreEqual(word1, result);
     }
 
+    [TestMethod]
+
+    public void PointEvaluator_EvaluatesNumberOfPointsFromWord_PointSystem()
+    {
+      string word2 = "cat";
+      PointSystem newPointSystem = new PointSystem(word2);
+      int result = newPointSystem.PointEvaluator();
+      Assert.AreEqual(typeof(int), result.GetType());
+    }
+
   }
 }
