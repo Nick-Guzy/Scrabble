@@ -12,7 +12,7 @@ namespace Scrabble.Tests
     [TestMethod]
     public void PointSystemConstructor_CreatesInstanceOfPointSystem_PointSystem()
     {
-      PointSystem newPointSystem = new PointSystem();
+      PointSystem newPointSystem = new PointSystem("userWord");
       Assert.AreEqual(typeof(PointSystem), newPointSystem.GetType());
     }
     
@@ -24,6 +24,6 @@ namespace Scrabble.Tests
       string result = newPointSystem.Word;
       Assert.AreEqual(word1, result);
     }
-    
+
   }
 }
