@@ -27,7 +27,7 @@ namespace Scrabble.Tests
 
     [TestMethod]
 
-    public void PointEvaluator_EvaluatesNumberOfPointsFromWord_PointSystem()
+    public void PointEvaluator_EvaluatesNumberOfPointsFromWord_Int()
     {
       string word2 = "cat";
       PointSystem newPointSystem = new PointSystem(word2);
@@ -35,5 +35,26 @@ namespace Scrabble.Tests
       Assert.AreEqual(typeof(int), result.GetType());
     }
 
+    [TestMethod]
+
+    public void ScoreDictionary_HasPointsAssignedToLetters_Dictionary()
+    {
+      char letter = 'K';
+      PointSystem newPointSystem = new PointSystem("test");
+      bool result = newPointSystem.ScoreDictionary.ContainsKey(letter);
+      
+      Assert.AreEqual(result, true);
+    }
+
+    [TestMethod]
+
+    public void PointEvaluator_ReturnsScoreFromWord_Int()
+    {
+      string word2 = "cat";
+      PointSystem newPointSystem = new PointSystem(word2);
+      int result = newPointSystem.PointEvaluator();
+      int expectedResult = 5;
+      Assert.AreEqual(result, expectedResult);
+    }
   }
 }
